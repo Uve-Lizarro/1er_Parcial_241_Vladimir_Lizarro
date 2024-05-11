@@ -1,0 +1,10 @@
+Vladimir Ariel Lizarro Velasquez
+La taxonomía de Flynn enuncia cuatro distintas arquitecturas:
+•	SISD que se refiere a una instrucción que se ejecuta sobre un solo dato.
+•	MISD que se refiere a múltiples instrucciones sobre un solo dato.
+•	SIMD que es una misma instrucción para múltiples datos.
+•	MIMD que son múltiples instrucciones sobre múltiples datos.
+El OPENMP es una biblioteca que permite el procesamiento paralelo permitiendo que partes del código se ejecutan en paralelo.
+El MPI permite la comunicación entre procesos ejecutándose de forma paralela en un sistema distribuido.
+MULTIPROCESSING en Python es una librería que permite realizar procesos paralelos, similares a los sistemas en arquitectura MIMD.
+El OPENMP, MPI y MULTIPROCESSING se clasificarían como MIMD debido a su capacidad de ejecutar múltiples ejecuciones sobre múltiples datos de forma independiente entre los procesos.
