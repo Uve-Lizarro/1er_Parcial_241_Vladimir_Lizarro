@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include <stdlib.h>
 #include <omp.h>
 //Vladimir Ariel Lizarro Velasquez
 void main(){
