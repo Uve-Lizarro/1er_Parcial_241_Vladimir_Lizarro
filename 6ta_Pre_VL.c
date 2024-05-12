@@ -20,7 +20,8 @@ double metodo_Integral(int n, int rango, int nroPro) {
     double r;  
     MPI_Reduce(&s, &r, 1, MPI_DOUBLE, MPI_SUM, 0, MPI_COMM_WORLD);
     return r*b;
-}  
+}
+  
 void main(int argc, char** argv) {  
     int n; 
     int rango; 
@@ -28,7 +29,11 @@ void main(int argc, char** argv) {
     MPI_Init(&argc, &argv);  
     MPI_Comm_rank(MPI_COMM_WORLD, &rango);  
     MPI_Comm_size(MPI_COMM_WORLD, &nroPro);
-    scanf("%d", &n);  
+    if (rango==0) { 
+        printf("Numero de iteraciones: "); 
+        fflush(stdout);
+        scanf("%d", &n);
+    }
     MPI_Bcast(&n, 1, MPI_INT, 0, MPI_COMM_WORLD); 
     double pi=metodo_Integral(n, rango, nroPro); 
     if (rango==0) {  
